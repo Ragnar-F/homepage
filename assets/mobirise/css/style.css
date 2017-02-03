@@ -1,6 +1,9 @@
 .mbr-contacts a:hover {
   color: white;
 }
+.mbr-header__text {
+  letter-spacing: 4px;
+}
 
 /*..................................*/
 html {
