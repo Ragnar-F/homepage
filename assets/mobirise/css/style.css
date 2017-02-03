@@ -1,4 +1,5 @@
-.mbr-contacts a:hover {
+.mbr-contacts a:hover,
+#sourcecode a:hover {
   color: white;
 }
 h3.mbr-header__text {
