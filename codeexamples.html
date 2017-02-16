@@ -49,9 +49,13 @@
 			&nbsp; <span class="S11">ExitApp</span><br />
 			</codebox>
 		</codedisplay>
+		<button onclick="prev()">Prev</button>
+		<button onclick="next()">Next</button>
+		<span id="counter">0</span>
 		<script>
-			current = 0
+			current = 0;
 			set();
+			setInterval(next,5000);
 			function next(){ current += 1; if (current > 2 || current < 0) { current = 0; } set(); }
 			function prev(){ current -= 1; if (current > 2 || current < 0) { current = 2; } set(); }
 			function set() { 
@@ -64,8 +68,5 @@
 				document.getElementById('counter').innerHTML = current;
 			}
 		</script>
-		<button onclick="prev()">Prev</button>
-		<button onclick="next()">Next</button>
-		<span id="counter">0</span>
 	</body>
 </html>

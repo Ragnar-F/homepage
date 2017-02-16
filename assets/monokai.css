@@ -15,11 +15,7 @@ codebox {
 	background-color: #272822;
 	transition: opacity 0.3s;
 }
-codebox span {
-	font-family: 'DejaVu Sans Mono';
-	color: #F8F8F2;
-	font-size: 10pt;
-}
+codebox span,
 codebox .S0 {
 	font-family: 'DejaVu Sans Mono';
 	color: #F8F8F2;
