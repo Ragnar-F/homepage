@@ -5,7 +5,12 @@
 h3.mbr-header__text {
   letter-spacing: 3px;
 }
-
+#MainTitle {
+  font-family: "Myriad Pro", "Segoe UI", "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  text-shadow: 1px 1px 60px;
+  margin-bottom: 3px;
+}
 /*..................................*/
 html {
   position: relative;
