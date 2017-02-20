@@ -75,6 +75,7 @@
 			function code_carousel() {
 				this.next = function(){ z = current + 1; if (z > max || z < 0) { z=0 } set(z); }
 				this.prev = function(){ z = current - 1; if (z > max || z < 0) { z=max; } set(z); }
+				this.updatetimer = function() { clearInterval(timer); timer = setInterval(next,5000); }
 				this.set = function(x=0) {
 					e = document.getElementById('tracker').getElementsByTagName('a');
 					e[current].setAttribute("class","");
@@ -85,14 +86,16 @@
 					for(i=0;i<elems.length;i++) { elems[i].style.opacity = 0; }
 					elems[current].style.opacity = 1;
 					document.getElementById('counter').innerHTML = current;
+					updatetimer();
 				}
+
 				current = 0;
 				max = document.getElementsByTagName('codebox').length - 1;
 				for(i=0;i<max+1;i++){
-					document.getElementById('tracker').innerHTML += '<a onclick="set('+i+')">'+i+'</a>'
+					document.getElementById('tracker').innerHTML += '<a onclick="set('+i+')">'+(i+1)+'</a>'
 				}
+				timer = 0
 				this.set();
-				setInterval(this.next,10000);
 			}
 		</script>
 	</body>
