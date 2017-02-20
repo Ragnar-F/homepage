@@ -13,9 +13,18 @@
 #header1-1 .btn {
   font-size: 18px;
 }
+
 #header1-1 H1 {
   font-size: 72px;
 }
+
+@media screen and (max-width: 360px) {
+	#header1-1 H1 {
+	  font-size: 3.5em !important;
+	  padding-top: 1.3em !important;
+	}
+}
+
 #msg-box5-4 .mbr-header__text {
   color: #ffffff;
 }
