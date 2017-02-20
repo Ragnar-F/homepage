@@ -1,13 +1,12 @@
 .desc, codecarousel {
 	display: inline-table;
-	width: 500px;
-	max-width: 48%;
+	width: 48%;
 }
 .desc {
 	font-family: arial, sans-serif;
 	color: white;
 }
-@media screen and (max-device-width: 1000px) {
+@media screen and (max-width: 1000px) {
 	.desc, codecarousel {
 		display: block;
 		max-width: 98%;
