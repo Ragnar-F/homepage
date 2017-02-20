@@ -12,7 +12,7 @@
 		max-width: 98%;
 		width: 98%;
 	}
-	.code_btn, #counter {
+	#counter {
 		display: none !important;
 	}
 	codecarousel {
