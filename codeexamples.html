@@ -8,46 +8,56 @@
 	</head>
 	<body>
 		<codedisplay style="height:300px;">
-			<!-- for empty line, add:  &nbsp; <span class="S0"></span>   or   &nbsp; <br />   -->
-			<codebox>
-			&nbsp; <span class="S1">; hotstrings - expand 'btw' to 'By they way' as you type</span><br />
-			&nbsp; <span class="S4">::</span><span class="S10">btw</span><span class="S4">::</span><span class="S6">By the way</span><br />
-			&nbsp; <br />
-			&nbsp; <span class="S1">; hotkeys - press winkey-z to go to Google</span><br />
-			&nbsp; <span class="S8">#z</span><span class="S4">::</span><br />
-			&nbsp; <span class="S12">Run</span><span class="S0"> http</span><span class="S5">://</span><span class="S0">google</span><span class="S5">.</span><span class="S0">com</span><br />
-			&nbsp; <span class="S11">Return</span><br />
-			</codebox>
-			<br />
-			<codebox>
-			&nbsp; <span class="S1">; copy text to the clipboard, modify it, paste it back</span><br />
-			&nbsp; <span class="S5">^+</span><span class="S8">k</span><span class="S4">::</span><span class="S0"> </span><span class="S1">; ctrl-shift-k</span><br />
-			&nbsp; <span class="S0">ClipSave</span><span class="S4">:=</span><span class="S16">ClipboardAll</span><span class="S0"> </span><span class="S1">; store current clipboard</span><br />
-			&nbsp; <span class="S12">Send</span><span class="S0"> </span><span class="S5">^</span><span class="S0">c </span><span class="S1">; copy selected text</span><br />
-			&nbsp; <span class="S16">clipboard</span><span class="S4">:=</span><span class="S6">"&lt;i&gt;"</span><span class="S0"> </span><span class="S16">clipboard</span><span class="S0"> </span><span class="S6">"&lt;/i&gt;"</span><span class="S0"> </span><span class="S1">; wrap the selected text in html-tags</span><br />
-			&nbsp; <span class="S12">Send</span><span class="S0"> </span><span class="S5">^</span><span class="S0">v </span><span class="S1">; paste</span><br />
-			&nbsp; <span class="S16">Clipboard</span><span class="S4">:=</span><span class="S0">ClipSave </span><span class="S1">; restore old clipboard content</span><br />
-			&nbsp; <span class="S0">ClipSave</span><span class="S4">:=</span><span class="S6">""</span><span class="S0"> </span><span class="S1">; clear variable</span><br />
-			&nbsp; <span class="S11">Return</span><br />
-			</codebox>
-			<br />
-			<codebox>
-			&nbsp; <span class="S1">; Easy to make GUIs</span><br />
-			&nbsp; <span class="S12">Gui</span><span class="S4">,</span><span class="S0"> </span><span class="S17">Add</span><span class="S4">,</span><span class="S0"> </span><span class="S17">Text</span><span class="S4">,</span><span class="S0"> </span><span class="S4">,</span><span class="S0"> </span><span class="S15">Enter</span><span class="S0"> your name</span><br />
-			&nbsp; <span class="S12">Gui</span><span class="S4">,</span><span class="S0"> </span><span class="S17">Add</span><span class="S4">,</span><span class="S0"> </span><span class="S12">Edit</span><span class="S4">,</span><span class="S0"> vName w150</span><br />
-			&nbsp; <span class="S12">Gui</span><span class="S4">,</span><span class="S0"> </span><span class="S17">Add</span><span class="S4">,</span><span class="S0"> </span><span class="S17">Button</span><span class="S4">,</span><span class="S0"> </span><span class="S4">,</span><span class="S0"> </span><span class="S17">OK</span><br />
-			&nbsp; <span class="S12">Gui</span><span class="S4">,</span><span class="S0"> </span><span class="S17">Show</span><br />
-			&nbsp; <span class="S11">Return</span><br />
-			&nbsp; <br />
-			&nbsp; <span class="S10">ButtonOK</span><span class="S4">:</span><br />
-			&nbsp; <span class="S12">Gui</span><span class="S4">,</span><span class="S0"> </span><span class="S17">Submit</span><span class="S4">,</span><span class="S0"> </span><span class="S17">Destroy</span><br />
-			&nbsp; <span class="S12">MsgBox</span><span class="S0"> Hello </span><span class="S4">%</span><span class="S9">name</span><span class="S4">%</span><br />
-			&nbsp; <span class="S11">Return</span><br />
-			&nbsp; <br />
-			&nbsp; <span class="S15">Esc</span><span class="S4">::</span><br />
-			&nbsp; <span class="S10">GuiClose</span><span class="S4">:</span><br />
-			&nbsp; <span class="S11">ExitApp</span><br />
-			</codebox>
+		<!-- for empty line, add:  &nbsp; <span class="S0"></span>   or   &nbsp; <br />   -->
+		<codebox>
+		&nbsp; <span class="S1">; hotstrings - expand 'btw' to 'By they way' as you type</span><br />
+		&nbsp; <span class="S4">::</span><span class="S10">btw</span><span class="S4">::</span><span class="S6">By the way</span><br />
+		&nbsp; <br />
+		&nbsp; <span class="S1">; hotkeys - press winkey-z to go to Google</span><br />
+		&nbsp; <span class="S8">#z</span><span class="S4">::</span><br />
+		&nbsp; <span class="S12">Run</span><span class="S0"> http</span><span class="S5">://</span><span class="S0">google</span><span class="S5">.</span><span class="S0">com</span><br />
+		&nbsp; <span class="S11">Return</span><br />
+		</codebox>
+		<br />
+		<codebox>
+		&nbsp; <span class="S1">; copy text to the clipboard, modify it, paste it back</span><br />
+		&nbsp; <span class="S5">^+</span><span class="S8">k</span><span class="S4">::</span><span class="S0"> </span><span class="S1">; ctrl-shift-k</span><br />
+		&nbsp; <span class="S0">ClipSave</span><span class="S4">:=</span><span class="S16">ClipboardAll</span><span class="S0"> </span><span class="S1">; store current clipboard</span><br />
+		&nbsp; <span class="S12">Send</span><span class="S0"> </span><span class="S5">^</span><span class="S0">c </span><span class="S1">; copy selected text</span><br />
+		&nbsp; <span class="S16">clipboard</span><span class="S4">:=</span><span class="S6">"&lt;i&gt;"</span><span class="S0"> </span><span class="S16">clipboard</span><span class="S0"> </span><span class="S6">"&lt;/i&gt;"</span><span class="S0"> </span><span class="S1">; wrap the selected text in html-tags</span><br />
+		&nbsp; <span class="S12">Send</span><span class="S0"> </span><span class="S5">^</span><span class="S0">v </span><span class="S1">; paste</span><br />
+		&nbsp; <span class="S16">Clipboard</span><span class="S4">:=</span><span class="S0">ClipSave </span><span class="S1">; restore old clipboard content</span><br />
+		&nbsp; <span class="S0">ClipSave</span><span class="S4">:=</span><span class="S6">""</span><span class="S0"> </span><span class="S1">; clear variable</span><br />
+		&nbsp; <span class="S11">Return</span><br />
+		</codebox>
+		<br />
+		<codebox>
+		&nbsp; <span class="S1">; Easy to make GUIs</span><br />
+		&nbsp; <span class="S12">Gui</span><span class="S4">,</span><span class="S0"> </span><span class="S17">Add</span><span class="S4">,</span><span class="S0"> </span><span class="S17">Text</span><span class="S4">,</span><span class="S0"> </span><span class="S4">,</span><span class="S0"> </span><span class="S15">Enter</span><span class="S0"> your name</span><br />
+		&nbsp; <span class="S12">Gui</span><span class="S4">,</span><span class="S0"> </span><span class="S17">Add</span><span class="S4">,</span><span class="S0"> </span><span class="S12">Edit</span><span class="S4">,</span><span class="S0"> vName w150</span><br />
+		&nbsp; <span class="S12">Gui</span><span class="S4">,</span><span class="S0"> </span><span class="S17">Add</span><span class="S4">,</span><span class="S0"> </span><span class="S17">Button</span><span class="S4">,</span><span class="S0"> </span><span class="S4">,</span><span class="S0"> </span><span class="S17">OK</span><br />
+		&nbsp; <span class="S12">Gui</span><span class="S4">,</span><span class="S0"> </span><span class="S17">Show</span><br />
+		&nbsp; <span class="S11">Return</span><br />
+		&nbsp; <br />
+		&nbsp; <span class="S10">ButtonOK</span><span class="S4">:</span><br />
+		&nbsp; <span class="S12">Gui</span><span class="S4">,</span><span class="S0"> </span><span class="S17">Submit</span><span class="S4">,</span><span class="S0"> </span><span class="S17">Destroy</span><br />
+		&nbsp; <span class="S12">MsgBox</span><span class="S0"> Hello </span><span class="S4">%</span><span class="S9">name</span><span class="S4">%</span><br />
+		&nbsp; <span class="S11">Return</span><br />
+		&nbsp; <br />
+		&nbsp; <span class="S15">Esc</span><span class="S4">::</span><br />
+		&nbsp; <span class="S10">GuiClose</span><span class="S4">:</span><br />
+		&nbsp; <span class="S11">ExitApp</span><br />
+		</codebox>
+		<codebox>
+		<span class="S1">; AutoHotkey (Associative) Arrays</span><br />
+		&nbsp; <span class="S0">Colors</span><span class="S4">:=</span><span class="S6">"Red,Green,Blue"</span><span class="S0"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S1">; string</span><br />
+		&nbsp; <span class="S0">ColorArray</span><span class="S4">:=</span><span class="S13">StrSplit</span><span class="S5">(</span><span class="S0">Colors</span><span class="S4">,</span><span class="S0"> </span><span class="S6">","</span><span class="S5">)</span><span class="S0"> &nbsp;</span><span class="S1">; create array</span><br />
+		&nbsp; <br />
+		&nbsp; <span class="S0">ColorArray</span><span class="S5">.</span><span class="S0">Push</span><span class="S5">(</span><span class="S6">"Purple"</span><span class="S5">)</span><span class="S0"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S1">; add data</span><br />
+		&nbsp; <br />
+		&nbsp; <span class="S11">for</span><span class="S0"> index</span><span class="S4">,</span><span class="S0"> element </span><span class="S17">in</span><span class="S0"> ColorArray &nbsp;&nbsp;</span><span class="S1">; Read from the array</span><br />
+		&nbsp; <span class="S0">&nbsp; &nbsp; </span><span class="S12">MsgBox</span><span class="S0"> % </span><span class="S6">"Color "</span><span class="S0"> index </span><span class="S6">" = "</span><span class="S0"> element</span>
+		</codebox>
 		</codedisplay>
 		<button onclick="prev()">Prev</button>
 		<button onclick="next()">Next</button>
@@ -55,19 +65,16 @@
 		<script>
 			code_carousel();
 			function code_carousel() {
-				this.next = function(){ current += 1; if (current > 2 || current < 0) { current = 0; } set(); }
-				this.prev = function(){ current -= 1; if (current > 2 || current < 0) { current = 2; } set(); }
-				this.set = function() { 
+				this.next = function(){ current += 1; if (current > max || current < 0) { current = 0; } set(); }
+				this.prev = function(){ current -= 1; if (current > max || current < 0) { current = max; } set(); }
+				this.set = function() {
 					elems = document.getElementsByTagName('codebox');
-					elems[0].style.opacity = 0;
-					elems[1].style.opacity = 0;
-					elems[2].style.opacity = 0;
-
+					for(i=0;i<elems.length;i++) { elems[i].style.opacity = 0; }
 					elems[current].style.opacity = 1;
 					document.getElementById('counter').innerHTML = current;
 				}
-
 				current = 0;
+				max = document.getElementsByTagName('codedisplay')[0].getElementsByTagName('codebox').length - 1;
 				this.set();
 				setInterval(this.next,5000);
 			}
