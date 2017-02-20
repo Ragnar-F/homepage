@@ -13,6 +13,14 @@
 		max-width: 98%;
 		width: 98%;
 	}
+	.code_btn, #counter {
+		display: none !important;
+	}
+	codescreen {
+		max-width: 98%;
+		white-space: nowrap;
+		overflow: scroll;
+	}
 }
 codescreen {
 	display: block;
@@ -21,6 +29,9 @@ codescreen {
 	padding: 4px;
 	margin: 0;
 	position: relative;
+	border-radius: 4px;
+
+	height:300px;width:480px;
 }
 codebox {
 	position: absolute;
