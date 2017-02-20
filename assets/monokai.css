@@ -16,10 +16,8 @@
 	.code_btn, #counter {
 		display: none !important;
 	}
-	codescreen {
-		max-width: 98%;
-		white-space: nowrap;
-		overflow: scroll;
+	codecarousel {
+		overflow: auto;
 	}
 }
 codescreen {
