@@ -42,6 +42,19 @@ codebox {
 #tracker {
 	display: inline-block;
 }
+#code_pause {
+	font-size: 9pt;
+	color: white;
+}
+#code_pause:hover {
+	color: #ffd343;
+}
+#code_pause.xactive {
+	color: #ffd343;
+	background-image: linear-gradient(#272822 10%,#334349 90%);
+	position: relative;
+	top: 1px;
+}
 .code_btn,
 #tracker a {
 	font-family: "Courier New", Courier, monospace;
@@ -57,6 +70,7 @@ codebox {
 	margin: 4px;
 	font-size: 16px;
 	display: inline-block;
+	cursor: pointer;
 }
 .code_btn,
 #tracker a.xactive {

@@ -69,13 +69,24 @@
 		<div id="tracker"></div>
 		<button class="code_btn" onclick="next()">&gt;</button>
 		<span id="counter">0</span>
+		<button class="code_btn" id="code_pause" onclick="pause()">&#10073;&#10073;</button>
 		</codecarousel>
 		<script>
 			code_carousel();
 			function code_carousel() {
 				this.next = function(){ z = current + 1; if (z > max || z < 0) { z=0 } set(z); }
 				this.prev = function(){ z = current - 1; if (z > max || z < 0) { z=max; } set(z); }
-				this.updatetimer = function() { clearInterval(timer); timer = setInterval(next,5000); }
+				this.updatetimer = function() { clearInterval(timer); timer = setInterval(next,7000); }
+				this.pause = function() {
+					if (timer == 0) {
+						updatetimer();
+						document.getElementById('code_pause').setAttribute('class','code_btn');
+					} else {
+						clearInterval(timer);
+						timer = 0;
+						document.getElementById('code_pause').setAttribute('class','code_btn xactive');
+					}
+				}
 				this.set = function(x=0) {
 					e = document.getElementById('tracker').getElementsByTagName('a');
 					e[current].setAttribute("class","");
