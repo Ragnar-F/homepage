@@ -18,3 +18,11 @@
 	border: solid #666 1px;
 	border-radius: 3px;
 }
+
+
+.sp_icon {
+	height: 1.7em;
+	width: 1.7em;
+	position: relative;
+	top: -0.2em;
+}
