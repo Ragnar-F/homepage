@@ -9,9 +9,11 @@
 #back-to-top.show {
 	opacity: 0.6;
 }
+/*
 #back-to-top.show:hover {
 	opacity: 1;
 }
+*/
 #back-to-top a{
 	background-color: #1A1A1A;
 	width: 50px;
